@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S1-t2</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- TODO
+         *LA IMAGEN SALTA CUANDO SE AGRANDA EL VIEWPORT
+         * EL BOTON TOGGLER NO ESTA CENTRADO. NO RESPONDE A JUSTIFY-CONTENT-END
+         
+        -->
+    <div class="container-fluid mx-sm-5 my-sm-3">
+      <nav class="navbar navbar-expand-lg navbar-light mx-sm-5 mb-sm-5">
+        <div class="container-fluid p-0">
+          <div class="col-sm-6">
+            <a class="navbar-brand" href="#">
+              <img
+                src="/Sprint-1-T2/Imagenes/logo-bookmark.svg"
+                alt="Logo bookmark"
+              />
+            </a>
+          </div>
+          <button
+            class="navbar-toggler justify-content-end"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="col-sm-6">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav gap-3">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">PRICING</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">COMMENTS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">FEATURES</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-secondary px-4 ms-2" id="login" href="#"
+                    >LOGIN</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container row mx-sm-5 pe-0">
+        <div class="header p-0 mt-3 col-sm-6 mt-sm-5">
+          <h1>A Simple Bookmark Manager</h1>
+          <p class="text-header mt-3">
+            A clean and simple interface to organize your favorte wevsites. Open
+            a new browser tab and see your sites load instanly. Try it for free
+          </p>
+          <div class="d-grid gap-3 d-md-block">
+            <button class="btn btn-primary shadow" type="button">
+              Get it on Chrome
+            </button>
+            <button class="btn btn-light shadow" type="button">
+              Get it on Firefox
+            </button>
+          </div>
+        </div>
+        <div class="col-sm-6 container">
+          <div class="img-container mt-3">
+            <img
+              class="img-fluid"
+              src="/Sprint-1-T2/Imagenes/illustration-hero.svg"
+              alt="ilustration of  webpage"
+            />
+          </div>
+          <div class="circulo"></div>
+        </div>
+      </div>
+    </div>
+    <script src="/Sprint-1-T2/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
