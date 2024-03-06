@@ -6,13 +6,15 @@
     <title>S1-t2</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="overflow-x-hidden">
+  <body>
     <!-- TODO
          *LA IMAGEN SALTA CUANDO SE AGRANDA EL VIEWPORT
          * EL BOTON TOGGLER NO ESTA CENTRADO. NO RESPONDE A JUSTIFY-CONTENT-END
-         
+         * EL UNDERLINE DEL TAB NO VA COMO QUIERO
+         * EL CIRCULO NO LLEGA AL BORDE         
         -->
-    <div class="container-fluid mx-sm-5 my-sm-3">
+
+    <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light mx-sm-5 mb-sm-5">
         <div class="container-fluid p-0">
           <div class="col-sm-6">
@@ -35,7 +37,11 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="col-sm-6">
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div
+              class="collapse navbar-collapse"
+              id="navbarTogglerDemo02"
+              role="navigation"
+            >
               <ul class="navbar-nav gap-3">
                 <li class="nav-item">
                   <a class="nav-link active" href="#">PRICING</a>
@@ -58,8 +64,9 @@
       </nav>
 
       <div class="container row mx-sm-5 pe-0">
+
         <div class="header p-0 mt-3 col-sm-6 mt-sm-5">
-          <h1>A Simple Bookmark Manager</h1>
+          <p class="h1">A Simple Bookmark Manager</p>
           <p class="text-header mt-3">
             A clean and simple interface to organize your favorte wevsites. Open
             a new browser tab and see your sites load instanly. Try it for free
@@ -81,9 +88,55 @@
               alt="ilustration of  webpage"
             />
           </div>
-          <div class="circulo"></div>
+          <div class="circulo-right"></div>
         </div>
       </div>
+      <!-- Ejercicio 2  -->
+      <p class="h2">Features</p>
+
+      <p class="features col-md-6 offset-md-3">
+        Our aim is to make it quick and easy for you to access your favorite
+        websites. Your bookmarks sync between your devices so you can access
+        them on the go
+      </p>
+      <div class="col-md-6 offset-md-3">
+        <ul class="nav  nav-justified nav-underline nav-custom border-bottom">
+          <li class="nav-item ">
+            <a class="nav-link " aria-current="page" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+        
+        
+      </div>
+      <div class="container row mx-sm-5 pe-0">
+
+        <div class="header p-0 mt-3 col-sm-6 mt-sm-5 order-last">
+          <p class="h1">A Simple Bookmark Manager</p>
+          <p class="text-header mt-3">
+            A clean and simple interface to organize your favorte wevsites. Open
+            a new browser tab and see your sites load instanly. Try it for free
+          </p>
+            <button class="btn btn-light shadow" type="button">
+              Get it on Firefox
+            </button>          
+        </div>
+        <div class="col-sm-6 container">
+          <div class="img-container mt-3">
+            <img
+              class="img-fluid"
+              src="/Sprint-1-T2/Imagenes/illustration-hero.svg"
+              alt="ilustration of  webpage"
+            />
+          </div>
+          <div class="circulo-left"></div>
+        </div>
+      </div>  
     </div>
     <script src="/Sprint-1-T2/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>

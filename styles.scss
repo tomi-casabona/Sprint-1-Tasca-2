@@ -8,17 +8,56 @@ $theme-colors: (
   "light": $light,
 );
 
-@import "./node_modules/bootstrap/scss/functions";
 
-.circulo {
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/maps";
+@import "./node_modules/bootstrap/scss/mixins";
+@import "./node_modules/bootstrap/scss/root";
+
+
+$nav-link-color:rgb(0, 0, 0);
+$nav-link-hover-color: $secondary;
+$nav-underline-border-width:0;
+ 
+// $nav-underline-gap:                 1rem;
+// $nav-underline-link-active-color: red;
+
+// .nav-custom:hover{
+// text-decoration:underline;
+// background-color: aqua; 
+// }
+
+.nav-link{
+    border-bottom: 1px solid gray
+}
+.nav-item:active{
+    border-bottom: 2px solid rgb(225, 14, 14)
+}
+
+.nav-underline:hover{
+  border-bottom-color: transparent;
+}
+
+.circulo-right {
   background: #5265e1;
-  margin-top: -12rem;
+  margin-top: -10rem;
   height: 10rem;
   width: 30%;
   border-radius: 10rem 0 0 10rem;
-  margin-left: 10rem;
+  margin-left: 20rem;
   z-index: -1;
-  position: absolute;
+  position: relative;
+}
+.circulo-left{
+  background: #5265e1;
+  margin-top: -10rem;
+  height: 10rem;
+  width: 40%;
+  border-radius: 0 10rem 10rem 0 ;
+  margin-left: -15rem;
+  z-index: -1;
+  position: relative;
 }
 
 body {
@@ -27,6 +66,7 @@ body {
   margin: 0;
   max-width: 1400px;
 }
+
 #login {
   color: white;
 }
@@ -35,7 +75,7 @@ a {
   text-decoration: none;
 }
 
-h1 {
+.h1 {
   text-align: left;
 }
 
@@ -51,5 +91,19 @@ p {
   text-align: start;
   opacity: 0.6;
 }
+.features {
+  text-align: center;
+  opacity : 0.6;
+}
+
+.li{
+  text-decoration: none;
+}
+
+@include media-breakpoint-up(sm) { ... }
+@include media-breakpoint-up(md) { ... }
+@include media-breakpoint-up(lg) { ... }
+@include media-breakpoint-up(xl) { ... }
+@include media-breakpoint-up(xxl) { ... }
 
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
