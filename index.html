@@ -8,18 +8,16 @@
   </head>
   <body>
     <!-- TODO
-         *LA IMAGEN SALTA CUANDO SE AGRANDA EL VIEWPORT
          * EL BOTON TOGGLER NO ESTA CENTRADO. NO RESPONDE A JUSTIFY-CONTENT-END
          * EL UNDERLINE DEL TAB NO VA COMO QUIERO
-         * EL CIRCULO NO LLEGA AL BORDE 
-         * el media breakpoint no va bien en el boton  
-         * no va el modificador del hover en nav-underline 
+         * EL CIRCULO se pasa de los bordes del div y del body
+         * no va el modificador del hover en nav-underline
          * los padding rigth se van sumando, y el izquierdo no , me queda desfazado
-         * el display block del navbar-features no responde. y desde bootstrap si d-block   
+         * el display block del navbar-features no responde. y desde bootstrap si d-block
         -->
 
     <div class="container">
-      
+
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid p-0">
           <div class="col-sm-6 p-3">
@@ -84,7 +82,7 @@
             </button>
           </div>
         </div>
-        <div class="col-sm-6 container img-container order-first order-sm-last">
+        <div class="col-sm-6 container img-container order-first order-sm-last p-0">
           <div class="container mt-3">
             <img
               class="img-fluid"
@@ -92,7 +90,7 @@
               alt="ilustration of  webpage"
             />
           </div>
-          <!-- <div class="circulo-right"></div> -->
+          <div class="circulo-right"></div>
         </div>
       </div>
       <!-- Ejercicio 2  -->
@@ -127,7 +125,7 @@
             More Info
           </button>
         </div>
-        <div class="col-sm-6 container">
+        <div class="col-sm-6 container p-0">
           <div class="img-container mt-4">
             <img
               class="img-fluid"
@@ -135,10 +133,10 @@
               alt="ilustration of  webpage"
             />
           </div>
-          <!-- <div class="circulo-left"></div> -->
+          <div class="circulo-left"></div>
         </div>
       </div>
-   
+
   </div>
     <script src="/Sprint-1-T2/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
