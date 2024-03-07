@@ -11,13 +11,18 @@
          *LA IMAGEN SALTA CUANDO SE AGRANDA EL VIEWPORT
          * EL BOTON TOGGLER NO ESTA CENTRADO. NO RESPONDE A JUSTIFY-CONTENT-END
          * EL UNDERLINE DEL TAB NO VA COMO QUIERO
-         * EL CIRCULO NO LLEGA AL BORDE         
+         * EL CIRCULO NO LLEGA AL BORDE 
+         * el media breakpoint no va bien en el boton  
+         * no va el modificador del hover en nav-underline 
+         * los padding rigth se van sumando, y el izquierdo no , me queda desfazado
+         * el display block del navbar-features no responde. y desde bootstrap si d-block   
         -->
 
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light mx-sm-5 mb-sm-5">
+      
+      <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid p-0">
-          <div class="col-sm-6">
+          <div class="col-sm-6 p-3">
             <a class="navbar-brand" href="#">
               <img
                 src="/Sprint-1-T2/Imagenes/logo-bookmark.svg"
@@ -26,7 +31,7 @@
             </a>
           </div>
           <button
-            class="navbar-toggler justify-content-end"
+            class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarTogglerDemo02"
@@ -38,7 +43,7 @@
           </button>
           <div class="col-sm-6">
             <div
-              class="collapse navbar-collapse"
+              class="collapse navbar-collapse justify-content-center"
               id="navbarTogglerDemo02"
               role="navigation"
             >
@@ -63,15 +68,14 @@
         </div>
       </nav>
 
-      <div class="container row mx-sm-5 pe-0">
-
-        <div class="header p-0 mt-3 col-sm-6 mt-sm-5">
+      <div class="container row">
+        <div class="text-section mt-3 col-sm-6 ">
           <p class="h1">A Simple Bookmark Manager</p>
-          <p class="text-header mt-3">
+          <p class="text text-start mt-3">
             A clean and simple interface to organize your favorte wevsites. Open
             a new browser tab and see your sites load instanly. Try it for free
           </p>
-          <div class="d-grid gap-3 d-md-block">
+          <div class="d-flex gap-3">
             <button class="btn btn-primary shadow" type="button">
               Get it on Chrome
             </button>
@@ -80,29 +84,31 @@
             </button>
           </div>
         </div>
-        <div class="col-sm-6 container">
-          <div class="img-container mt-3">
+        <div class="col-sm-6 container img-container order-first order-sm-last">
+          <div class="container mt-3">
             <img
               class="img-fluid"
               src="/Sprint-1-T2/Imagenes/illustration-hero.svg"
               alt="ilustration of  webpage"
             />
           </div>
-          <div class="circulo-right"></div>
+          <!-- <div class="circulo-right"></div> -->
         </div>
       </div>
       <!-- Ejercicio 2  -->
+      <div class="container row mt-4">
       <p class="h2">Features</p>
 
-      <p class="features col-md-6 offset-md-3">
+      <p class=" text text-center col-md-6 offset-md-3 mt-4 mb-0">
         Our aim is to make it quick and easy for you to access your favorite
         websites. Your bookmarks sync between your devices so you can access
         them on the go
       </p>
-      <div class="col-md-6 offset-md-3">
-        <ul class="nav  nav-justified nav-underline nav-custom border-bottom">
-          <li class="nav-item ">
-            <a class="nav-link " aria-current="page" href="#">Active</a>
+
+      <div class="col-md-6 offset-md-3 my-4">
+        <ul class="navbar-features nav nav-justified nav-underline border-bottom d-block d-sm-flex">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Active</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
@@ -111,33 +117,29 @@
             <a class="nav-link" href="#">Link</a>
           </li>
         </ul>
-        
-        
       </div>
-      <div class="container row mx-sm-5 pe-0">
-
-        <div class="header p-0 mt-3 col-sm-6 mt-sm-5 order-last">
-          <p class="h1">A Simple Bookmark Manager</p>
-          <p class="text-header mt-3">
-            A clean and simple interface to organize your favorte wevsites. Open
-            a new browser tab and see your sites load instanly. Try it for free
+        <div class="text-section mt-4 col-sm-6 ps-4 order-last">
+          <p class="h1">A Simple Bookmark in one click</p>
+          <p class="text text-start mt-4">
+            Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.
           </p>
-            <button class="btn btn-light shadow" type="button">
-              Get it on Firefox
-            </button>          
+          <button class="btn features btn-primary shadow" type="button">
+            More Info
+          </button>
         </div>
         <div class="col-sm-6 container">
-          <div class="img-container mt-3">
+          <div class="img-container mt-4">
             <img
               class="img-fluid"
               src="/Sprint-1-T2/Imagenes/illustration-hero.svg"
               alt="ilustration of  webpage"
             />
           </div>
-          <div class="circulo-left"></div>
+          <!-- <div class="circulo-left"></div> -->
         </div>
-      </div>  
-    </div>
+      </div>
+   
+  </div>
     <script src="/Sprint-1-T2/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

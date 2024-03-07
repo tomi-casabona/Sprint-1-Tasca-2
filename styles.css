@@ -1,4 +1,10 @@
 @charset "UTF-8";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -166,16 +172,8 @@
   --bs-form-invalid-border-color: #ea868f;
 }
 
-.nav-link {
-  border-bottom: 1px solid gray;
-}
-
-.nav-item:active {
-  border-bottom: 2px solid rgb(225, 14, 14);
-}
-
 .nav-underline:hover {
-  border-bottom-color: transparent;
+  border: none;
 }
 
 .circulo-right {
@@ -186,7 +184,7 @@
   border-radius: 10rem 0 0 10rem;
   margin-left: 20rem;
   z-index: -1;
-  position: absolute;
+  position: relative;
 }
 
 .circulo-left {
@@ -197,14 +195,7 @@
   border-radius: 0 10rem 10rem 0;
   margin-left: -15rem;
   z-index: -1;
-  position: absolute;
-}
-
-body {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  max-width: 1400px;
+  position: relative;
 }
 
 #login {
@@ -227,18 +218,25 @@ p {
   text-align: center;
 }
 
-.text-header {
-  text-align: start;
-  opacity: 0.6;
-}
-
-.features {
-  text-align: center;
+.text {
   opacity: 0.6;
 }
 
 .li {
   text-decoration: none;
+}
+
+@media (max-width: 575.98px) {
+  .h1 {
+    text-align: center;
+  }
+}
+p {
+  text-align: center;
+}
+
+button.features {
+  width: 100%;
 }
 
 /*!
@@ -3924,7 +3922,7 @@ textarea.form-control-lg {
 
 .nav-underline {
   --bs-nav-underline-gap: 1rem;
-  --bs-nav-underline-border-width: 0;
+  --bs-nav-underline-border-width: 0.2rem;
   --bs-nav-underline-link-active-color: var(--bs-emphasis-color);
   gap: var(--bs-nav-underline-gap);
 }

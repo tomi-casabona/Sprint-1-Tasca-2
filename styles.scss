@@ -1,3 +1,11 @@
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; 
+}
+
 $primary: #5265e1;
 $secondary: #fa5959;
 $light: #f2f1f1d9;
@@ -18,26 +26,18 @@ $theme-colors: (
 
 $nav-link-color:rgb(0, 0, 0);
 $nav-link-hover-color: $secondary;
-$nav-underline-border-width:0;
- 
+$nav-underline-border-width:0.2rem;
+
+.nav-underline:hover{
+   border: none;
+ }
+
 // $nav-underline-gap:                 1rem;
 // $nav-underline-link-active-color: red;
-
 // .nav-custom:hover{
 // text-decoration:underline;
 // background-color: aqua; 
 // }
-
-.nav-link{
-    border-bottom: 1px solid gray
-}
-.nav-item:active{
-    border-bottom: 2px solid rgb(225, 14, 14)
-}
-
-.nav-underline:hover{
-  border-bottom-color: transparent;
-}
 
 .circulo-right {
   background: #5265e1;
@@ -60,13 +60,6 @@ $nav-underline-border-width:0;
   position: relative;
 }
 
-body {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  max-width: 1400px;
-}
-
 #login {
   color: white;
 }
@@ -87,23 +80,25 @@ p {
   text-align: center;
 }
 
-.text-header {
-  text-align: start;
+.text {
   opacity: 0.6;
-}
-.features {
-  text-align: center;
-  opacity : 0.6;
 }
 
 .li{
   text-decoration: none;
 }
 
-@include media-breakpoint-up(sm) { ... }
-@include media-breakpoint-up(md) { ... }
-@include media-breakpoint-up(lg) { ... }
-@include media-breakpoint-up(xl) { ... }
-@include media-breakpoint-up(xxl) { ... }
+@include media-breakpoint-down(sm) { 
+  .h1{text-align:center;}
+}
+
+  //  .navbar-features{
+
+  //    display: block;
+  //  }
+
+   p{text-align: center;}
+ 
+   button.features{ width:100%;}
 
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
