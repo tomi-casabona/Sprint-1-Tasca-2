@@ -14,9 +14,15 @@ $theme-colors: (
   "light": $light,
 );
 
+$navbar-light-hover-color: $secondary;
+$modal-footer-border-width: 0;
+$modal-header-border-width: 0;
 $nav-tabs-link-hover-border-color: transparent;
 $nav-link-hover-color: $secondary;
 $nav-link-color: rgb(0, 0, 0);
+$modal-content-bg: rgb(44, 44, 99);
+$modal-content-color: #ffff;
+$btn-border-width: 2px;
 
 @import "./node_modules/bootstrap/scss/functions";
 @import "./node_modules/bootstrap/scss/variables";
@@ -32,6 +38,15 @@ $nav-link-color: rgb(0, 0, 0);
   border-bottom-color: $secondary !important;
   font-weight: 700 !important;
   color: $secondary !important;
+}
+
+ul {
+  list-style-type: none;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 .circulo-right {
@@ -53,10 +68,6 @@ $nav-link-color: rgb(0, 0, 0);
   margin-left: -10rem;
   z-index: -1;
   position: relative;
-}
-
-#login {
-  color: white;
 }
 
 a {
@@ -81,6 +92,33 @@ p {
 
 .li {
   text-decoration: none;
+}
+#list-modal {
+  border-top: 1px solid #ffff;
+  text-align: center;
+  margin-top: auto;
+}
+.card {
+  width: 200px !important;
+}
+
+.card-img {
+  max-width: 150px !important;
+  margin: auto;
+}
+.card-chrome {
+  margin-bottom: 14% !important;
+}
+
+.card-opera {
+  margin-top: 7% !important;
+  margin-bottom: 7% !important;
+}
+.card-firefox {
+  margin-top: 14% !important;
+}
+.card-footer {
+  background-color: transparent !important;
 }
 
 @include media-breakpoint-down(xxl) {
@@ -120,9 +158,21 @@ p {
   }
 }
 @include media-breakpoint-down(sm) {
-  .navbar {
+  .card-chrome {
+    margin-top: 5px !important;
   }
-  .h1 {
+
+  .card-opera {
+    margin-top: 5p !important;
+  }
+  .card-firefox {
+    margin-top: 5px !important;
+  }
+  .extensions {
+    display: flex;
+    flex-direction: column;
+  }
+  .img .h1 {
     text-align: center;
   }
 
