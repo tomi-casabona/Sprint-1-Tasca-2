@@ -172,8 +172,14 @@
   --bs-form-invalid-border-color: #ea868f;
 }
 
-.nav-underline:hover {
-  border: none;
+.nav-underline .nav-link:hover {
+  border-color: transparent !important;
+}
+
+.nav-underline .nav-link:focus {
+  border-bottom-color: #fa5959 !important;
+  font-weight: 700 !important;
+  color: #fa5959 !important;
 }
 
 .circulo-right {
@@ -226,17 +232,6 @@ p {
   text-decoration: none;
 }
 
-@media (max-width: 575.98px) {
-  .h1 {
-    text-align: center;
-  }
-  p {
-    text-align: center;
-  }
-  button.features {
-    width: 100%;
-  }
-}
 @media (max-width: 1399.98px) {
   .circulo-right {
     margin-top: -15rem;
@@ -262,17 +257,28 @@ p {
   }
 }
 .circulo-right {
-  margin-top: -7rem;
-  height: 7rem;
+  margin-top: -12rem;
+  height: 13rem;
   margin-left: 7rem;
 }
 
 .circulo-left {
-  margin-top: -7rem;
-  height: 7rem;
+  margin-top: -12rem;
+  height: 13rem;
   margin-left: -7rem;
 }
 
+@media (max-width: 575.98px) {
+  .h1 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+  button.features {
+    width: 100%;
+  }
+}
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -3912,7 +3918,7 @@ textarea.form-control-lg {
   --bs-nav-tabs-border-width: var(--bs-border-width);
   --bs-nav-tabs-border-color: var(--bs-border-color);
   --bs-nav-tabs-border-radius: var(--bs-border-radius);
-  --bs-nav-tabs-link-hover-border-color: var(--bs-secondary-bg) var(--bs-secondary-bg) var(--bs-border-color);
+  --bs-nav-tabs-link-hover-border-color: transparent;
   --bs-nav-tabs-link-active-color: var(--bs-emphasis-color);
   --bs-nav-tabs-link-active-bg: var(--bs-body-bg);
   --bs-nav-tabs-link-active-border-color: var(--bs-border-color) var(--bs-border-color) var(--bs-body-bg);
@@ -3956,7 +3962,7 @@ textarea.form-control-lg {
 
 .nav-underline {
   --bs-nav-underline-gap: 1rem;
-  --bs-nav-underline-border-width: 0.2rem;
+  --bs-nav-underline-border-width: 0.125rem;
   --bs-nav-underline-link-active-color: var(--bs-emphasis-color);
   gap: var(--bs-nav-underline-gap);
 }

@@ -16,8 +16,7 @@
          * el display block del navbar-features no responde. y desde bootstrap si d-block
         -->
 
-    <div class="container">
-
+    <div class="container p-0">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid p-0">
           <div class="col-sm-6 p-3">
@@ -66,8 +65,8 @@
         </div>
       </nav>
 
-      <div class="container row">
-        <div class="text-section mt-3 col-sm-6 ">
+      <div class="container row p-0 ms-3">
+        <div class="text-section mt-3 col-sm-6 p-0">
           <p class="h1">A Simple Bookmark Manager</p>
           <p class="text text-start mt-3">
             A clean and simple interface to organize your favorte wevsites. Open
@@ -82,8 +81,10 @@
             </button>
           </div>
         </div>
-        <div class="col-sm-6 container img-container order-first order-sm-last p-0">
-          <div class="container mt-3">
+        <div
+          class="col-sm-6 container img-container order-first order-sm-last p-0"
+        >
+          <div class="container mt-3 p-0">
             <img
               class="img-fluid"
               src="/Sprint-1-T2/Imagenes/illustration-hero.svg"
@@ -94,50 +95,160 @@
         </div>
       </div>
       <!-- Ejercicio 2  -->
-      <div class="container row mt-4">
-      <p class="h2">Features</p>
+      <div class="container row mt-4 p-0 ms-3">
+        <p class="h2">Features</p>
 
-      <p class=" text text-center col-md-6 offset-md-3 mt-4 mb-0">
-        Our aim is to make it quick and easy for you to access your favorite
-        websites. Your bookmarks sync between your devices so you can access
-        them on the go
-      </p>
+        <p class="text text-center col-md-6 offset-md-3 mt-4 mb-0 p-0">
+          Our aim is to make it quick and easy for you to access your favorite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go
+        </p>
 
-      <div class="col-md-6 offset-md-3 my-4">
-        <ul class="navbar-features nav nav-justified nav-underline border-bottom d-block d-sm-flex">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Active</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-        </ul>
-      </div>
-        <div class="text-section mt-4 col-sm-6 ps-4 order-last">
-          <p class="h1">A Simple Bookmark in one click</p>
-          <p class="text text-start mt-4">
-            Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.
-          </p>
-          <button class="btn features btn-primary shadow" type="button">
-            More Info
-          </button>
+        <div class="col-md-6 offset-md-3 my-4">
+          <ul
+            class="navbar-features nav nav-justified nav-underline border-bottom d-block d-sm-flex"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="home-tab"
+                data-bs-toggle="tab"
+                role="tab"
+                aria-controls="home"
+                data-bs-target="#home"
+                href="#home"
+                >Simple bookmarking</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="speady-tab"
+                data-bs-toggle="tab"
+                role="tab"
+                aria-controls="speady"
+                data-bs-target="#speady"
+                href="#speady-tab"
+                >Speedy Searching</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="easy-tab"
+                data-bs-toggle="tab"
+                role="tab"
+                aria-controls="easy"
+                data-bs-target="#easy"
+                href="#easy-tab"
+                >Speedy Searching</a
+              >
+            </li>
+          </ul>
         </div>
-        <div class="col-sm-6 container p-0">
-          <div class="img-container mt-4">
-            <img
-              class="img-fluid"
-              src="/Sprint-1-T2/Imagenes/illustration-hero.svg"
-              alt="ilustration of  webpage"
-            />
+        <div class="tab-content">
+          <div
+            class="tab-pane"
+            id="home"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+            tabindex="0"
+          >
+          <div class="container row p-0 ms-3">
+          <div class="text-section mt-4 col-sm-6 order-last p-0">
+            <p class="h1">A Simple Bookmark in one click</p>
+            <p class="text text-start mt-4">
+              Organize your bookmarks however you like. Our simple drag-and-drop
+              interface gives you complete control over how you manage your
+              favorite sites.
+            </p>
+            <button class="btn features btn-primary shadow" type="button">
+              More Info
+            </button>
           </div>
-          <div class="circulo-left"></div>
+          <div class="col-sm-6 container p-0">
+            <div class="img-container mt-4">
+              <img
+                class="img-fluid"
+                src="/Sprint-1-T2/Imagenes/illustration-hero.svg"
+                alt="ilustration of  webpage"
+              />
+            </div>
+            <div class="circulo-left"></div>
+          </div>
         </div>
-      </div>
+          </div>
+          <div
+            class="tab-pane"
+            id="speady"
+            role="tabpanel"
+            aria-labelledby="speady-tab"
+            tabindex="1"
+          >
+          <div class="container row p-0 ms-3">
+            <div class="text-section mt-4 col-sm-6 order-last p-0">
+              <p class="h1">Intelligent search</p>
+              <p class="text text-start mt-4">
+                Our powerfull search featurewill help you find saved sites in no time at all. No need ti trawl through all of your bokmarks.
+              </p>
+              <button class="btn features btn-primary shadow" type="button">
+                More Info
+              </button>
+            </div>
+            <div class="col-sm-6 container p-0">
+              <div class="img-container mt-4">
+                <img
+                  class="img-fluid"
+                  src="/Sprint-1-T2/Imagenes/illustration-features-tab-2.svg"
+                  alt="ilustration of  webpage"
+                />
+              </div>
+              <div class="circulo-left"></div>
+            </div>
+          </div>
+          </div>
+          <div
+            class="tab-pane"
+            id="easy"
+            role="tabpanel"
+            aria-labelledby="easy-tab"
+            tabindex="2"
+          >
+          <div class="container row p-0 ms-3">
+            <div class="text-section mt-4 col-sm-6 order-last p-0">
+              <p class="h1">Share your bookmarks</p>
+              <p class="text text-start mt-4">
+Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.              </p>
+              <button class="btn features btn-primary shadow" type="button">
+                More Info
+              </button>
+            </div>
+            <div class="col-sm-6 container p-0">
+              <div class="img-container mt-4">
+                <img
+                  class="img-fluid"
+                  src="/Sprint-1-T2/Imagenes/illustration-features-tab-1.svg"
+                  alt="ilustration of  webpage"
+                />
+              </div>
+              <div class="circulo-left"></div>
+            </div>
+          </div>
+          </div>
+        </div>
 
-  </div>
+<!-- Ejercicio 3 -->
+      <!-- </div>
+      <div class="container row mt-4 p-0 ms-3">
+        <p class="h2">Features</p>
+
+        <p class="text text-center col-md-6 offset-md-3 mt-4 mb-0 p-0">
+          Our aim is to make it quick and easy for you to access your favorite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go
+        </p>
+      </div> -->
+    </div>
     <script src="/Sprint-1-T2/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

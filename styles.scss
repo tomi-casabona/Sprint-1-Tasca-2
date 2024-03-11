@@ -1,9 +1,7 @@
-
-
 * {
   box-sizing: border-box;
   padding: 0;
-  margin: 0; 
+  margin: 0;
 }
 
 $primary: #5265e1;
@@ -16,6 +14,9 @@ $theme-colors: (
   "light": $light,
 );
 
+$nav-tabs-link-hover-border-color: transparent;
+$nav-link-hover-color: $secondary;
+$nav-link-color: rgb(0, 0, 0);
 
 @import "./node_modules/bootstrap/scss/functions";
 @import "./node_modules/bootstrap/scss/variables";
@@ -23,21 +24,15 @@ $theme-colors: (
 @import "./node_modules/bootstrap/scss/mixins";
 @import "./node_modules/bootstrap/scss/root";
 
+.nav-underline .nav-link:hover {
+  border-color: transparent !important;
+}
 
-$nav-link-color:rgb(0, 0, 0);
-$nav-link-hover-color: $secondary;
-$nav-underline-border-width:0.2rem;
-
-.nav-underline:hover{
-   border: none;
- }
-
-// $nav-underline-gap:                 1rem;
-// $nav-underline-link-active-color: red;
-// .nav-custom:hover{
-// text-decoration:underline;
-// background-color: aqua; 
-// }
+.nav-underline .nav-link:focus {
+  border-bottom-color: $secondary !important;
+  font-weight: 700 !important;
+  color: $secondary !important;
+}
 
 .circulo-right {
   background: #5265e1;
@@ -47,14 +42,14 @@ $nav-underline-border-width:0.2rem;
   border-radius: 10rem 0 0 10rem;
   margin-left: 10rem;
   z-index: -1;
-  position: relative
+  position: relative;
 }
-.circulo-left{
+.circulo-left {
   background: #5265e1;
   margin-top: -20rem;
   height: 20rem;
   width: 100%;
-  border-radius: 0 10rem 10rem 0 ;
+  border-radius: 0 10rem 10rem 0;
   margin-left: -10rem;
   z-index: -1;
   position: relative;
@@ -84,61 +79,60 @@ p {
   opacity: 0.6;
 }
 
-.li{
+.li {
   text-decoration: none;
 }
 
-@include media-breakpoint-down(sm) { 
-  .h1{text-align:center;}
-  
-     p{text-align: center;}
-   
-     button.features{ width:100%;}
-     
-       //  .navbar-features{
-     
-       //    display: block;
-       //  }
-}
-// @include media-breakpoint-down(md) { ... }
-// @include media-breakpoint-down(lg) { ... }
-
-
-@include media-breakpoint-down(xxl) { 
-  .circulo-right {    
-    margin-top: -15rem;
-    height: 15rem;    
-    margin-left: 10rem;    
-  }
-  .circulo-left{    
+@include media-breakpoint-down(xxl) {
+  .circulo-right {
     margin-top: -15rem;
     height: 15rem;
-    margin-left: -10rem;    
+    margin-left: 10rem;
   }
-};
-@include media-breakpoint-down(xl) { 
-  .circulo-right {    
-    margin-top: -10rem;
-    height: 10rem;    
-    margin-left: 7rem;    
+  .circulo-left {
+    margin-top: -15rem;
+    height: 15rem;
+    margin-left: -10rem;
   }
-  .circulo-left{    
+}
+@include media-breakpoint-down(xl) {
+  .circulo-right {
     margin-top: -10rem;
     height: 10rem;
-    margin-left: -7rem;    
+    margin-left: 7rem;
   }
- };
-@include media-breakpoint-down(m) { 
-  .circulo-right {    
-    margin-top: -7rem;
-    height: 7rem;    
-    margin-left: 7rem;    
+  .circulo-left {
+    margin-top: -10rem;
+    height: 10rem;
+    margin-left: -7rem;
   }
-  .circulo-left{    
-    margin-top: -7rem;
-    height: 7rem;
-    margin-left: -7rem;    
+}
+@include media-breakpoint-down(m) {
+  .circulo-right {
+    margin-top: -12rem;
+    height: 13rem;
+    margin-left: 7rem;
   }
- };
+  .circulo-left {
+    margin-top: -12rem;
+    height: 13rem;
+    margin-left: -7rem;
+  }
+}
+@include media-breakpoint-down(sm) {
+  .navbar {
+  }
+  .h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  button.features {
+    width: 100%;
+  }
+}
 
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
