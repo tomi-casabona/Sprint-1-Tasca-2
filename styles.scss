@@ -23,6 +23,7 @@ $nav-link-color: rgb(0, 0, 0);
 $modal-content-bg: rgb(44, 44, 99);
 $modal-content-color: #ffff;
 $btn-border-width: 2px;
+$accordion-icon-active-color: $secondary;
 
 @import "./node_modules/bootstrap/scss/functions";
 @import "./node_modules/bootstrap/scss/variables";
@@ -33,6 +34,13 @@ $btn-border-width: 2px;
 .nav-underline .nav-link:hover {
   border-color: transparent !important;
 }
+.accordion-button {
+  font-weight: 500;
+}
+.accordion-button:hover {
+  font-weight: 500;
+  color:$secondary;
+} 
 
 .nav-underline .nav-link:focus {
   border-bottom-color: $secondary !important;
@@ -40,6 +48,9 @@ $btn-border-width: 2px;
   color: $secondary !important;
 }
 
+.nav-underline .nav-link.active{
+  color: $secondary !important;
+}
 ul {
   list-style-type: none;
   font-weight: 500;
